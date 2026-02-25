@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "842ea0c055cc087a9827c5877dae77b2",
+    "content-hash": "a4646a8d2c7e5b96ab1924c9f22c0a2f",
     "packages": [
         {
             "name": "brick/math",
@@ -6339,6 +6339,69 @@
                 "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.1.1"
             },
             "time": "2025-04-30T06:54:44+00:00"
+        },
+        {
+            "name": "jackbayliss/laravel-dusk-parallel",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jackbayliss/laravel-dusk-parallel.git",
+                "reference": "36e9234b4146516871cf77bf567c29eb36f24203"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jackbayliss/laravel-dusk-parallel/zipball/36e9234b4146516871cf77bf567c29eb36f24203",
+                "reference": "36e9234b4146516871cf77bf567c29eb36f24203",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/dusk": "^8.0|^9.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "brianium/paratest": "^7.0|^8.0",
+                "laravel/pint": "^1.0",
+                "orchestra/testbench": "^8.0|^9.0|^10.0",
+                "phpunit/phpunit": "^10.5|^11.0"
+            },
+            "suggest": {
+                "brianium/paratest": "Required for PHPUnit parallel execution. Not needed when using Pest --parallel."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JackBayliss\\DuskParallel\\DuskParallelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JackBayliss\\DuskParallel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jack Bayliss",
+                    "email": "jjbdev@proton.me"
+                }
+            ],
+            "description": "Parallel test execution for Laravel Dusk.",
+            "keywords": [
+                "dusk",
+                "laravel",
+                "parallel",
+                "testing"
+            ],
+            "support": {
+                "issues": "https://github.com/jackbayliss/laravel-dusk-parallel/issues",
+                "source": "https://github.com/jackbayliss/laravel-dusk-parallel/tree/v.0.0.1"
+            },
+            "time": "2026-02-25T23:28:56+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
