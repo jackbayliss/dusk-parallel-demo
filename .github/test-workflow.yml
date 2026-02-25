@@ -1,0 +1,53 @@
+name: Dusk Parallel Demo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  dusk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: zip, json
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Copy environment file
+        run: cp .env.example .env
+
+      - name: Generate app key
+        run: php artisan key:generate
+
+      - name: Start ChromeDriver instances
+        run: |
+          chromedriver --port=9515 &
+          chromedriver --port=9516 &
+          sleep 2
+
+      - name: Start Laravel server
+        run: php artisan serve --port=8000 &
+
+      - name: Run Dusk tests in parallel
+        run: php artisan dusk:parallel --processes=2
+        env:
+          APP_URL: http://localhost:8000
+
+      - name: Upload screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ github.run_id }}
+          path: tests/Browser/screenshots
+          retention-days: 7
