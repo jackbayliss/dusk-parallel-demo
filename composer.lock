@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4646a8d2c7e5b96ab1924c9f22c0a2f",
+    "content-hash": "e37a9cd874101fad0d6956561fcad0a6",
     "packages": [
         {
             "name": "brick/math",
@@ -6342,16 +6342,16 @@
         },
         {
             "name": "jackbayliss/laravel-dusk-parallel",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jackbayliss/laravel-dusk-parallel.git",
-                "reference": "36e9234b4146516871cf77bf567c29eb36f24203"
+                "reference": "0e8b75ee27753b71988a6a285d123a68a06eabbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jackbayliss/laravel-dusk-parallel/zipball/36e9234b4146516871cf77bf567c29eb36f24203",
-                "reference": "36e9234b4146516871cf77bf567c29eb36f24203",
+                "url": "https://api.github.com/repos/jackbayliss/laravel-dusk-parallel/zipball/0e8b75ee27753b71988a6a285d123a68a06eabbe",
+                "reference": "0e8b75ee27753b71988a6a285d123a68a06eabbe",
                 "shasum": ""
             },
             "require": {
@@ -6399,9 +6399,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jackbayliss/laravel-dusk-parallel/issues",
-                "source": "https://github.com/jackbayliss/laravel-dusk-parallel/tree/v.0.0.1"
+                "source": "https://github.com/jackbayliss/laravel-dusk-parallel/tree/0.0.2"
             },
-            "time": "2026-02-25T23:28:56+00:00"
+            "time": "2026-02-25T23:55:11+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
