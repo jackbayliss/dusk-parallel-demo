@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e37a9cd874101fad0d6956561fcad0a6",
+    "content-hash": "180b1be62c2392498571793ed7ec6dbf",
     "packages": [
         {
             "name": "brick/math",
@@ -6342,16 +6342,16 @@
         },
         {
             "name": "jackbayliss/laravel-dusk-parallel",
-            "version": "0.0.2",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jackbayliss/laravel-dusk-parallel.git",
-                "reference": "0e8b75ee27753b71988a6a285d123a68a06eabbe"
+                "reference": "458de6772094f764ae75c100d7cf1bd6d00c8b56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jackbayliss/laravel-dusk-parallel/zipball/0e8b75ee27753b71988a6a285d123a68a06eabbe",
-                "reference": "0e8b75ee27753b71988a6a285d123a68a06eabbe",
+                "url": "https://api.github.com/repos/jackbayliss/laravel-dusk-parallel/zipball/458de6772094f764ae75c100d7cf1bd6d00c8b56",
+                "reference": "458de6772094f764ae75c100d7cf1bd6d00c8b56",
                 "shasum": ""
             },
             "require": {
@@ -6367,6 +6367,7 @@
             "suggest": {
                 "brianium/paratest": "Required for PHPUnit parallel execution. Not needed when using Pest --parallel."
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -6380,7 +6381,19 @@
                     "JackBayliss\\DuskParallel\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "JackBayliss\\DuskParallel\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "lint": [
+                    "vendor/bin/pint --parallel --preset=laravel"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -6398,10 +6411,10 @@
                 "testing"
             ],
             "support": {
-                "issues": "https://github.com/jackbayliss/laravel-dusk-parallel/issues",
-                "source": "https://github.com/jackbayliss/laravel-dusk-parallel/tree/0.0.2"
+                "source": "https://github.com/jackbayliss/laravel-dusk-parallel/tree/main",
+                "issues": "https://github.com/jackbayliss/laravel-dusk-parallel/issues"
             },
-            "time": "2026-02-25T23:55:11+00:00"
+            "time": "2026-02-25T23:58:42+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
@@ -8792,8 +8805,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {},
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "jackbayliss/laravel-dusk-parallel": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
