@@ -16,7 +16,7 @@
     "require-dev": {
         "brianium/paratest": "^7.8",
         "fakerphp/faker": "^1.23",
-        "jackbayliss/laravel-dusk-parallel": "^0.0.2",
+        "jackbayliss/laravel-dusk-parallel": "dev-main",
         "laravel/dusk": "^8.3",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.24",
@@ -25,6 +25,12 @@
         "nunomaduro/collision": "^8.6",
         "phpunit/phpunit": "^11.5.3"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jackbayliss/laravel-dusk-parallel"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
@@ -87,6 +93,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
