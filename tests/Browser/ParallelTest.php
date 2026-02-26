@@ -10,9 +10,9 @@ class ParallelTest extends DuskTestCase
 {
     public function test_tests_ran_in_separate_processes(): void
     {
-        $homePid = file_get_contents(storage_path('home-pid.txt'));
-        $aboutPid = file_get_contents(storage_path('about-pid.txt'));
+        $homeToken = file_get_contents(storage_path('home-token.txt'));
+        $aboutToken = file_get_contents(storage_path('about-token.txt'));
 
-        $this->assertNotSame($homePid, $aboutPid, 'Tests ran in the same process — parallelism is not working.');
+        $this->assertNotSame($homeToken, $aboutToken, 'Tests ran in the same worker.');
     }
 }
