@@ -32,6 +32,9 @@ jobs:
       - name: Generate app key
         run: php artisan key:generate
 
+      - name: Install chrome driver
+        run: php artisan dusk:chrome-driver --detect
+
       - name: Start ChromeDriver instances
         run: |
           chromedriver --port=9515 &
