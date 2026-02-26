@@ -10,7 +10,7 @@ class AboutTest extends DuskTestCase
 {
     public function test_about_page_loads(): void
     {
-        file_put_contents(storage_path('about-token.txt'), ParallelDriver::resolveDriverUrl());
+        file_put_contents(storage_path('about-url.txt'), ParallelDriver::resolveDriverUrl());
 
         $this->browse(function (Browser $browser) {
             $browser->visit('/about')

@@ -10,9 +10,9 @@ class ParallelTest extends DuskTestCase
 {
     public function test_tests_ran_in_separate_processes(): void
     {
-        $homeToken = file_get_contents(storage_path('home-token.txt'));
-        $aboutToken = file_get_contents(storage_path('about-token.txt'));
+        $homeToken = file_get_contents(storage_path('home-url.txt'));
+        $aboutToken = file_get_contents(storage_path('about-url.txt'));
 
-        $this->assertNotSame($homeToken, $aboutToken, 'Tests ran in the same worker.');
+        $this->assertNotSame($homeToken, $aboutToken, 'Tests ran in the same url.');
     }
 }
