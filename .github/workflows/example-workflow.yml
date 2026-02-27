@@ -37,6 +37,12 @@ jobs:
           touch database/database.sqlite
           php artisan migrate --force
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Build assets
+        run: bun install && bun run build
+
       - name: Install chrome driver
         run: php artisan dusk:chrome-driver --detect
 
